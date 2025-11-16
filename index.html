@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Sidhu!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="background"></div>
+
+  <!-- Stars & Bubbles -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Birthday Message -->
+  <div class="message-container">
+    <h1>Happy Happy Birthday Ganduuu!</h1>
+    <p>It's your day 🎉💖</p>
+  </div>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container"></div>
+
+  <!-- Interactive gift -->
+  <div class="gift-box" onclick="openGift()">
+    🎁
+    <div class="gift-message">Surprise! 💓</div>
+  </div>
+
+  <!-- Hold to reveal message -->
+  <div class="hold-message">
+    <p>💌 Hold here to reveal a secret message!</p>
+    <div class="hidden-text">You are amazing! ❤️🎉</div>
+  </div>
+
+  <!-- Music -->
+  <audio id="bg-music" src="images/music.mp3" autoplay loop></audio>
+
+  <!-- Typewriter message -->
+  <div class="typewriter">
+    <p id="typewriter-text"></p>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
