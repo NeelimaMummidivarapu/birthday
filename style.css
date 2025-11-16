@@ -1,3 +1,4 @@
+/* Basic Page */
 body {
     margin: 0;
     padding: 0;
@@ -6,13 +7,15 @@ body {
     text-align: center;
 }
 
+/* Title */
 .title {
-    margin-top: 20px;
+    margin-top: 80px;
     font-size: 26px;
     color: #ff4f9a;
     font-weight: 700;
 }
 
+/* Container */
 .container {
     width: 90%;
     max-width: 600px;
@@ -20,6 +23,7 @@ body {
     margin-top: 20px;
 }
 
+/* Cards */
 .card {
     background: white;
     border-radius: 18px;
@@ -27,23 +31,102 @@ body {
     margin-bottom: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     animation: pop 0.8s ease;
+    opacity: 0;
+    transform: translateY(40px);
 }
 
+/* Photos Full Width */
 .photo {
     width: 100%;
     border-radius: 16px;
 }
 
+/* Cute handwritten message font */
 .msg {
-    font-size: 18px;
+    font-size: 20px;
     color: #ff2e8f;
     margin-top: 10px;
-    font-weight: 500;
+    font-family: "Patrick Hand", cursive;
 }
 
-/* Cute bounce + pop animation */
+/* POP animation */
 @keyframes pop {
     0% { transform: scale(0.6); opacity: 0; }
     50% { transform: scale(1.05); opacity: 1; }
     100% { transform: scale(1); }
+}
+
+/* Smooth scroll fade-up animation */
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.8s ease;
+}
+
+/* Pastel Falling Hearts */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: fall 4s linear infinite;
+    opacity: 0.8;
+}
+@keyframes fall {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* MUSIC BUTTON */
+#musicBtn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: #ff8ac7;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+/* LOADING SCREEN */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffd7ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loader-text {
+    font-size: 26px;
+    color: #ff2e8f;
+    font-weight: bold;
+    animation: fade 1.5s infinite alternate;
+}
+.loader-heart {
+    font-size: 40px;
+    margin-top: 10px;
+    animation: pulse 1s infinite;
+}
+@keyframes fade {
+    from { opacity: .4; }
+    to   { opacity: 1; }
+}
+@keyframes pulse {
+    0% { transform: scale(0.8); }
+    100% { transform: scale(1.2); }
 }
