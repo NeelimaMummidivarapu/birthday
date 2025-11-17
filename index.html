@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Sidhu</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Handwritten Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;400;600&family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -19,16 +16,14 @@
         <div class="loader-heart">💗</div>
     </div>
 
-    <!-- FALLING HEARTS -->
+    <!-- HEARTS -->
     <div class="hearts-container"></div>
 
-    <!-- MUSIC BUTTON -->
-    <button id="musicBtn">Play Music ♡</button>
-    <audio id="bgMusic" loop>
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
-
-    <h1 class="title">Happy Happy Birthday Sidhu 💖 It's Your Day!</h1>
+    <!-- HUGE TITLE -->
+    <section class="hero">
+        <h1 class="bigTitle">Happy Birthday Sidhu 💖</h1>
+        <button id="musicBtn" class="playBtn">Play Music 🎵</button>
+    </section>
 
     <div class="container">
 
@@ -84,11 +79,15 @@
 
     </div>
 
-    <!-- FULL SCREEN ENDING MESSAGE -->
+    <!-- FINAL FULLSCREEN MESSAGE -->
     <section id="finalMessage">
         <div class="finalText">Once again Happy Birthday Ganduuu 💖</div>
         <div class="floatingHearts"></div>
     </section>
+
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
 </body>
 </html>
